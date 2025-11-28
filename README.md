@@ -1,232 +1,241 @@
+
+
 # 🚀 Flutter Login & Register App
 
-Selamat datang di project Flutter Login & Register sederhana! Ini adalah project latihan yang sempurna untuk memulai perjalanan Flutter Anda.
+<div align="center">
+
+![Flutter](https://img.shields.io/badge/Flutter-3.19.5-blue?style=for-the-badge&logo=flutter)
+![Dart](https://img.shields.io/badge/Dart-3.3.0-blue?style=for-the-badge&logo=dart)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+**Aplikasi Flutter sederhana untuk latihan implementasi sistem login dan register**
+
+</div>
+
+## 📸 Preview
+
+| Login Screen | Register Screen | Dashboard |
+|--------------|-----------------|-----------|
+| ![Login](https://via.placeholder.com/300x600/4A44B8/FFFFFF?text=Login+Screen) | ![Register](https://via.placeholder.com/300x600/6C63FF/FFFFFF?text=Register+Screen) | ![Dashboard](https://via.placeholder.com/300x600/36B37E/FFFFFF?text=Dashboard) |
 
 ## 📋 Tentang Project
 
-Project ini adalah implementasi **sistem autentikasi sederhana** menggunakan Flutter dengan fitur:
+Ini adalah project **Flutter Login & Register** yang dibuat untuk tujuan pembelajaran dan latihan. Project ini mengimplementasikan sistem autentikasi sederhana dengan antarmuka yang user-friendly.
 
-- ✅ **Login** dengan validasi form
-- ✅ **Register** dengan validasi form  
+### ✨ Fitur Utama
+
+- ✅ **Sistem Login** dengan validasi email & password
+- ✅ **Sistem Register** untuk membuat akun baru  
 - ✅ **Dashboard** setelah login berhasil
 - ✅ **Logout** functionality
-- ✅ **State Management** dasar
+- ✅ **Form Validation** yang robust
+- ✅ **Navigation** yang smooth antara halaman
+- ✅ **State Management** dengan Provider
+- ✅ **Local Storage** menggunakan Shared Preferences
 
-## 🎯 Pilih Level Kesulitan
+## 🛠️ Teknologi yang Digunakan
 
-Pilih tingkat kesulitan yang sesuai dengan level Anda:
+| Teknologi | Versi | Kegunaan |
+|-----------|-------|----------|
+| **Flutter** | 3.19.5 | UI Framework |
+| **Dart** | 3.3.0 | Programming Language |
+| **Provider** | ^6.1.1 | State Management |
+| **Shared Preferences** | ^2.2.2 | Local Storage |
+| **Material Design** | Latest | UI Components |
 
-<details>
-<summary>
-🎨 <strong>Pemula (Basic Version)</strong>
-</summary>
+## 📁 Struktur Project (Aktual)
 
-### Fitur:
-- UI sederhana dengan Material Design
-- Validasi form dasar
-- Navigasi antara halaman
-- Penyimpanan data lokal sederhana
-
-```dart
-// Contoh code sederhana
-class LoginPage extends StatelessWidget {
-  // Implementasi dasar
-}
-```
-
-</details>
-
-<details>
-<summary>
-⚡ <strong>Menengah (Intermediate Version)</strong>
-</summary>
-
-### Fitur:
-- State Management dengan Provider/Riverpod
-- Validasi form advanced
-- Shared Preferences untuk persistensi
-- Custom animations
-- Error handling
-
-```dart
-// Contoh dengan state management
-class AuthProvider with ChangeNotifier {
-  // Business logic terpisah
-}
-```
-
-</details>
-
-<details>
-<summary>
-🔥 <strong>Lanjutan (Advanced Version)</strong>
-</summary>
-
-### Fitur:
-- Clean Architecture
-- Dependency Injection
-- API integration (Mock/Real)
-- Unit & Widget testing
-- Firebase Integration
-- Bloc/Cubit state management
-
-```dart
-// Contoh clean architecture
-@injectable
-class LoginUseCase {
-  // Use case pattern
-}
-```
-
-</details>
-
-## 🛠️ Setup & Installation
-
-### Prerequisites:
-- Flutter SDK (3.x atau lebih baru)
-- Dart SDK
-- IDE (VS Code/Android Studio)
-
-### Langkah instalasi:
-
-```bash
-# Clone repository ini
-git clone https://github.com/your-username/flutter-login-app.git
-
-# Masuk ke directory project
-cd flutter-login-app
-
-# Install dependencies
-flutter pub get
-
-# Run project
-flutter run
-```
-
-## 📁 Struktur Project
+Berdasarkan repository Anda, struktur project:
 
 ```
 lib/
+├── main.dart                      # Entry point aplikasi
 ├── models/
-│   └── user_model.dart
-├── pages/
-│   ├── login_page.dart
-│   ├── register_page.dart
-│   └── dashboard_page.dart
+│   └── user_model.dart           # Data model untuk User
+├── providers/
+│   └── auth_provider.dart        # Business logic autentikasi
+├── screens/
+│   ├── login_screen.dart         # Halaman Login
+│   ├── register_screen.dart      # Halaman Register
+│   └── dashboard_screen.dart     # Halaman setelah login
 ├── services/
-│   └── auth_service.dart
+│   └── auth_service.dart         # Service layer untuk auth
 ├── utils/
-│   └── validators.dart
-└── main.dart
+│   ├── validators.dart           # Utility validasi form
+│   └── shared_preferences.dart   # Helper shared preferences
+└── widgets/
+    ├── custom_textfield.dart     # Custom input field
+    └── primary_button.dart       # Custom button
 ```
 
-## 🎨 Customization
+## 🚀 Quick Start
 
-### Warna Theme:
+### Prerequisites:
+- Flutter SDK ≥ 3.19.0
+- Dart SDK ≥ 3.3.0
+- Android Studio / VS Code
+
+### Installation Steps:
+
+```bash
+# 1. Clone repository
+git clone https://github.com/RRachman/LoginRegisterFlutterTasks.git
+
+# 2. Masuk ke directory project
+cd LoginRegisterFlutterTasks
+
+# 3. Install dependencies
+flutter pub get
+
+# 4. Run aplikasi
+flutter run
+```
+
+### Untuk Build APK:
+```bash
+flutter build apk --release
+```
+
+## 🎯 Cara Penggunaan
+
+### 1. **Register Akun Baru**
+- Buka aplikasi
+- Tap "Register" 
+- Isi form dengan data valid:
+  - Email format benar
+  - Password minimal 6 karakter
+  - Konfirmasi password harus sama
+
+### 2. **Login**
+- Masukkan email & password yang sudah diregister
+- Tap "Login"
+- Akan diarahkan ke Dashboard jika berhasil
+
+### 3. **Logout**
+- Dari Dashboard, tap tombol "Logout"
+- Akan kembali ke halaman Login
+
+## 🔧 Konfigurasi & Customization
+
+### Mengubah Theme Colors:
+Edit di `main.dart`:
+
 ```dart
-const primaryColor = Color(0xFF6C63FF);
-const secondaryColor = Color(0xFF4A44B8);
+MaterialApp(
+  theme: ThemeData(
+    primaryColor: Color(0xFF6C63FF),    // Ungu
+    accentColor: Color(0xFF4A44B8),     // Ungu tua
+    scaffoldBackgroundColor: Colors.white,
+  ),
+)
 ```
 
-### Font:
-Project menggunakan font default Flutter, bisa diganti dengan:
-- Poppins
-- Inter
-- Atau font custom
+### Menambah Validasi Custom:
+Edit `utils/validators.dart`:
 
-## 🚀 Fitur yang Bisa Ditambahkan
+```dart
+static String? validatePhone(String? value) {
+  if (value!.isEmpty) return 'Nomor HP harus diisi';
+  if (value.length < 10) return 'Nomor HP minimal 10 digit';
+  return null;
+}
+```
 
-- [ ] **Google Sign-In**
-- [ ] **Facebook Login** 
-- [ ] **Biometric Authentication**
-- [ ] **Forgot Password**
-- [ ] **Email Verification**
-- [ ] **Dark Mode**
-- [ ] **Multi-language Support**
+## 🐛 Troubleshooting
 
-## 📝 Learning Checklist
+<details>
+<summary><b>❌ Error: Provider not found</b></summary>
 
-### Basic Concepts:
-- [ ] Understanding Widget Tree
-- [ ] State Management basics
-- [ ] Form Validation
-- [ ] Navigation
+**Solution:**
+Pastikan Provider sudah di-wrap di main.dart:
 
-### Intermediate:
-- [ ] Custom Widgets
-- [ ] API Integration
-- [ ] Local Storage
-- [ ] Error Handling
+```dart
+return MultiProvider(
+  providers: [
+    ChangeNotifierProvider(create: (_) => AuthProvider()),
+  ],
+  child: MaterialApp(...),
+);
+```
+</details>
 
-### Advanced:
-- [ ] Testing (Unit/Widget)
-- [ ] CI/CD
-- [ ] Performance Optimization
-- [ ] Advanced State Management
+<details>
+<summary><b>❌ Error: Shared Preferences not working</b></summary>
+
+**Solution:**
+Tambah permission di `android/app/src/main/AndroidManifest.xml`:
+
+```xml
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+```
+</details>
+
+<details>
+<summary><b>❌ Build failed - version conflict</b></summary>
+
+**Solution:**
+Update dependencies di `pubspec.yaml`:
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.1
+  shared_preferences: ^2.2.2
+```
+</details>
+
+## 📚 Learning Resources
+
+### Untuk Pemula:
+- [Flutter Documentation](https://flutter.dev/docs)
+- [Dart Programming](https://dart.dev/guides)
+- [Provider Package](https://pub.dev/packages/provider)
+
+### Untuk Development Lanjutan:
+- [Clean Architecture Flutter](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+- [Flutter Testing](https://flutter.dev/docs/testing)
+- [State Management Comparison](https://flutter.dev/docs/development/data-and-backend/state-mgmt/options)
 
 ## 🤝 Contributing
 
-Ingin berkontribusi? Silakan:
-1. Fork project ini
-2. Buat feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push ke branch (`git push origin feature/AmazingFeature`)
-5. Open Pull Request
+Ingin berkontribusi ke project ini? Silakan!
 
-## 📞 Butuh Bantuan?
+1. **Fork** repository ini
+2. **Buat branch** fitur baru (`git checkout -b feature/namafitur`)
+3. **Commit** perubahan (`git commit -m 'Menambah fitur X'`)
+4. **Push** ke branch (`git push origin feature/namafitur`)
+5. **Buat Pull Request**
 
-### Common Issues:
-<details>
-<summary>🚧 Error pada flutter pub get</summary>
+## 🎯 Roadmap & Enhancement
 
-Solution:
-```bash
-flutter clean
-flutter pub get
-```
-</details>
+Fitur yang bisa ditambahkan kedepannya:
 
-<details>
-<summary>📱 Emulator tidak terdeteksi</summary>
+- [ ] **Integration dengan REST API**
+- [ ] **Google Sign-In**
+- [ ] **Biometric Authentication** 
+- [ ] **Forgot Password Flow**
+- [ ] **Email Verification**
+- [ ] **Dark Mode Support**
+- [ ] **Multi-language (i18n)**
+- [ ] **Unit & Widget Tests**
 
-Solution:
-```bash
-flutter doctor
-# Pastikan emulator running atau device terhubung
-```
-</details>
+## 📄 License
 
-<details>
-<summary>🔧 Build failed</summary>
+Project ini dilisensikan under **MIT License** - lihat file [LICENSE](LICENSE) untuk detail lengkap.
 
-Solution:
-- Pastikan Flutter SDK updated
-- Check dependencies compatibility
-- Clean project: `flutter clean`
-</details>
+## 👨‍💻 Author
 
-## 🎉 Selamat!
-
-Anda telah menyelesaikan setup project! Sekarang pilih salah satu:
-
-### 🎯 Mulai Coding:
-```bash
-# Buka di VS Code
-code .
-
-# Atau Android Studio
-android-studio .
-```
-
-### 📚 Pelajari Lebih Lanjut:
-- [Flutter Documentation](https://flutter.dev/docs)
-- [Dart Language Tour](https://dart.dev/guides/language/language-tour)
-- [Provider State Management](https://pub.dev/packages/provider)
+**RRachman** - [GitHub Profile](https://github.com/RRachman)
 
 ---
 
-**⭐ Jangan lupa star repository ini jika membantu!**
+<div align="center">
 
-**💡 Punya pertanyaan? Open an issue atau DM saya!**
+### ⭐ Jangan lupa kasih star jika project ini membantu!
 
-Happy Coding! 🚀
+**Happy Coding!** 🎉
+
+</div>
+
+---
